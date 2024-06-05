@@ -1,0 +1,15 @@
+version: '3'
+services:
+  container_python:
+    build:
+      context: .
+      dockerfile: python.dockerfile
+    volumes:
+      - ./results:/data
+
+  container_js:
+    build:
+      context: .
+      dockerfile: javascript.dockerfile
+    volumes:
+      - ./results:/data
